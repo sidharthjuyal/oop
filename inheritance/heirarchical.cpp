@@ -6,18 +6,16 @@ class Vehicle
 public:
 	Vehicle()
 	{
-	cout << "This is a Vehicle" << endl;
+		cout << "This is a Vehicle" << endl;
 	}
 };
 
-class Car: public Vehicle
+class Car : public Vehicle
 {
-
 };
 
-class Bus: public Vehicle
+class Bus : public Vehicle
 {
-	
 };
 
 int main()

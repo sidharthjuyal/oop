@@ -1,32 +1,33 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class greeting
 {
-  public:
+public:
   greeting()
   {
-      cout<<"Greeting"<<endl;
+    cout << "Greeting" << endl;
   }
   ~greeting()
   {
-      cout<<"anti Greeting"<<endl;
+    cout << "anti Greeting" << endl;
   }
 };
 
-class hello:public greeting{
+class hello : public greeting
+{
 public:
-hello()
+  hello()
   {
-      cout<<"Hello"<<endl;
+    cout << "Hello" << endl;
   }
   ~hello()
   {
-      cout<<"Byee"<<endl;
+    cout << "Byee" << endl;
   }
 };
 
 int main()
 {
-hello obj;
+  hello obj;
 }

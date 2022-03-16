@@ -1,35 +1,33 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class A{
+class A
+{
 public:
-
-void f1(){ cout<<"A f1 hello"<<endl; };
-void f2(){ cout<<"A f2 hello"<<endl; };
-
+   void f1() { cout << "A f1 hello" << endl; };
+   void f2() { cout << "A f2 hello" << endl; };
 };
 
-
-class B:public A{
+class B : public A
+{
 public:
-void f1(){ cout<<"B f1 hello"<<endl; };
-//method overriding
-void f2(int i){ cout<<"B f2 hello"<<endl; };
-//method hiding
+   void f1() { cout << "B f1 hello" << endl; };
+   // method overriding
+   void f2(int i) { cout << "B f2 hello" << endl; };
+   // method hiding
 };
 
 int main()
 {
    B obj;
-   obj.f1(); //B ka f1 chlega   
-   obj.f2(4); 
+   obj.f1(); // B ka f1 chlega
+   obj.f2(4);
    obj.A::f1();
-
 }
 
 /* function Hiding
 
-above case me vaise to agar ham obj.f2() likhte to parent class vala f2 execute hojata as B inherits A but here we have done method hiding which doesnt allow this, 
+above case me vaise to agar ham obj.f2() likhte to parent class vala f2 execute hojata as B inherits A but here we have done method hiding which doesnt allow this,
 
 method hiding
 
